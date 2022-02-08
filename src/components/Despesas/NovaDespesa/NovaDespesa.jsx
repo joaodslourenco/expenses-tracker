@@ -13,7 +13,10 @@ function NovaDespesa(props) {
 
   return (
     <div className="new-expense">
-      <FormularioDespesa aoSalvarDadosDespesa={salvarNovaDespesa} />
+      <FormularioDespesa
+        aoSalvarDadosDespesa={salvarNovaDespesa}
+        toggleForm={props.toggleForm}
+      />
     </div>
   )
 }

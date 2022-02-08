@@ -11,11 +11,12 @@ function FormularioDespesa(props) {
 
     const dadosDespesa = {
       titulo: titulo,
-      valor: valor,
+      valor: +valor,
       data: new Date(data)
     }
 
     props.aoSalvarDadosDespesa(dadosDespesa)
+    console.log(dadosDespesa)
     setTitulo('')
     setValor('')
     setData('')
@@ -52,6 +53,9 @@ function FormularioDespesa(props) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="submit" onClick={props.toggleForm}>
+          Cancelar
+        </button>
         <button type="submit">Adicionar despesa</button>
       </div>
     </form>

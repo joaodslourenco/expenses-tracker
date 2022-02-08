@@ -4,7 +4,7 @@ export default function FiltroDespesas(props) {
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
-        <label>Filter by year</label>
+        <label>Filtrar por ano</label>
         <select
           value={props.filtroSelecionado}
           onChange={e => props.filtroRecebido(e.target.value)}
